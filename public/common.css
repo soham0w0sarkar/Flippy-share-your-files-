@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Unbounded", cursive;
+}
+
+body {
+  display: flex;
+  background-image: linear-gradient(
+    to right bottom,
+    #95ccf4,
+    #88c1f6,
+    #7fb5f7,
+    #7da9f6,
+    #809bf3
+  );
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to left bottom,
+    #95ccf4,
+    #88c1f6,
+    #7fb5f7,
+    #7da9f6,
+    #809bf3
+  );
+  width: 50%;
+  height: 90%;
+  border-radius: 40px;
+  box-shadow: -19px -15px 3px -3px rgb(128, 155, 243, 0.94);
+}
+.roomId {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+input {
+  width: 60%;
+  height: 30%;
+  text-align: center;
+  font-weight: bolder;
+  margin: 5px;
+  outline: none;
+  border: none;
+  font-size: larger;
+  border-radius: 4px;
+}
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid #fff;
+  box-shadow: 1px 0px 15px -5px rgba(0, 0, 0, 0.34);
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #fff;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s;
+  opacity: 0.3;
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+.screen {
+  padding: 20px;
+}
+.screen .file-input {
+  width: 100%;
+  border: 2px dashed #555;
+}
+.screen .file-input label {
+  display: block;
+  width: 100%;
+  padding: 40px 50px;
+  text-align: center;
+  color: #111;
+  font-size: 18px;
+}
+.screen .file-input input {
+  display: none;
+}
+.screen .files-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.screen .files-list .title {
+  width: 100%;
+  margin: 20px 0px;
+}
+.screen .files-list .item {
+  width: 33%;
+  min-width: 200px;
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
+}
+.screen .files-list .item .progress {
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  color: #222;
+  font-family: "Montserrat";
+}
+.screen .files-list .item .filename {
+  padding: 5px;
+  font-size: 18px;
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./common.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen hidden">
+        <div class="files-list">
+          <div class="title">Shared files</div>
+        </div>
+      </div>
+      <div class="roomId">
+        <input type="text" value="000-000-000" id="roomID" />
+        <div class="btn">Join</div>
+      </div>
+    </div>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.7/download.min.js"></script>
+    <script src="./receiver.js"></script>
+  </body>
+</html>
