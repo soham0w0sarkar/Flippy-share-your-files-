@@ -9,7 +9,7 @@ const io = require("socket.io")(server);
 app.use(express.static(path.join(__dirname + "/public")));
 
 io.on("connection", function (socket) {
-  console.log("Connection on PORT: 8080.........");
+  console.log("Connection started.........");
 
   socket.on("sender-join", function (data) {
     console.log("Sender Joined.........");
@@ -31,4 +31,6 @@ io.on("connection", function (socket) {
   });
 });
 
-server.listen(8080);
+server.listen(8080, () => {
+  console.log("Server listening on PORT : 8080........");
+});

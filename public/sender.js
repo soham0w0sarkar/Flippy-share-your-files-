@@ -25,8 +25,8 @@ const screen = document.querySelector(".screen");
 
   socket.on("init", (uid) => {
     receiverID = uid;
-    screen.classList.remove("hidden");
-    roomId.classList.remove("hidden");
+    screen.classList.toggle("hidden");
+    roomId.classList.toggle("hidden");
   });
 
   document.querySelector("#file-input").addEventListener("change", (e) => {
