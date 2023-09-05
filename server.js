@@ -1,12 +1,18 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import { createServer } from "http";
+import { config } from "dotenv";
+import { Server } from "socket.io";
 
 const app = express();
-const server = require("http").createServer(app);
+const server = createServer(app);
 
-const io = require("socket.io")(server);
+config({
+  path: "./config/config.env",
+});
 
-app.use(express.static(path.join(__dirname + "/public")));
+const io = new Server(server);
+
+app.use(express.static("./public"));
 
 io.on("connection", function (socket) {
   console.log("Connection started.........");
@@ -31,6 +37,6 @@ io.on("connection", function (socket) {
   });
 });
 
-server.listen(8080, () => {
-  console.log("Server listening on PORT : 8080........");
+server.listen(process.env.PORT, () => {
+  console.log(`Server listening on PORT : ${process.env.PORT}........`);
 });

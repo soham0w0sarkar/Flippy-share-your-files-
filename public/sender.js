@@ -25,7 +25,7 @@ const screen = document.querySelector(".screen");
 
   socket.on("init", (uid) => {
     receiverID = uid;
-    screen.classList.toggle("hidden");
+    screen.classList.toggle("hidde0%n");
     roomId.classList.toggle("hidden");
   });
 

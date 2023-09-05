@@ -79,7 +79,7 @@ input {
   padding: 20px;
   flex-direction: column;
   align-items: center;
-  max-height: 100%;
+  height: 100%;
 }
 .screen .file-input {
   width: 100%;
